@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- FOND DÉCORATIF (DÉGRADÉ) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/header_gradient" />
+
+    <!-- CONTENU PRINCIPAL (SANS TITRE POUR UN LOOK PLUS ÉPURÉ) -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="60dp">
+
+            <!-- CARTE DASHBOARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.Material3.CardView.Elevated"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="12dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="32dp">
+
+                    <!-- CERCLE ICONE -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        app:cardCornerRadius="110dp"
+                        app:cardBackgroundColor="@color/surface_variant"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/primary"
+                        app:strokeWidth="4dp">
+
+                        <ImageView
+                            android:id="@+id/imagooo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="20dp"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/ic_launcher"
+                            android:contentDescription="@string/desc_image" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- TEXTE STATUT -->
+                    <TextView
+                        android:id="@+id/txtooooStatusss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:gravity="center"
+                        android:text="@string/status_ready"
+                        android:textColor="@color/text_main"
+                        android:textSize="26sp"
+                        android:fontFamily="sans-serif-black" />
+
+                    <!-- BARRE DE PROGRESSION NÉON -->
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressooBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:visibility="invisible"
+                        app:indicatorColor="@color/primary"
+                        app:trackColor="@color/surface_variant"
+                        app:trackCornerRadius="12dp"
+                        app:trackThickness="16dp" />
+
+                    <!-- VALEUR % -->
+                    <TextView
+                        android:id="@+id/txtooProgressValueeee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/primary_light"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible"
+                        tools:text="100%" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/label_actions"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.2" />
+
+            <!-- BOUTONS ACTIONS -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/boutnLoaddddThreaddd"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:text="@string/btn_thread"
+                android:textColor="@color/primary_light"
+                android:textSize="16sp"
+                app:backgroundTint="@color/surface_variant"
+                app:cornerRadius="24dp"
+                app:icon="@android:drawable/ic_menu_gallery"
+                app:iconSize="24dp"
+                app:iconPadding="16dp"
+                app:iconTint="@color/primary_light" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/boutnCalcAaasync"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/btn_async"
+                android:textColor="@color/primary_light"
+                android:textSize="16sp"
+                app:backgroundTint="@color/surface_variant"
+                app:cornerRadius="24dp"
+                app:icon="@android:drawable/ic_menu_manage"
+                app:iconSize="24dp"
+                app:iconPadding="16dp"
+                app:iconTint="@color/primary_light" />
+
+            <!-- BOUTON TEST UI -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/boutnToastttt"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/btn_toast"
+                android:textColor="@color/text_secondary"
+                app:cornerRadius="16dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

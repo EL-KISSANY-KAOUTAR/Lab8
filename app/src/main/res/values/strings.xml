@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MultiThread Pro</string>
+    <string name="status_ready">Système Prêt</string>
+    <string name="status_loading_thread">Chargement de la ressource…</string>
+    <string name="status_loaded_thread">Traitement terminé</string>
+    <string name="status_calc_async">Calcul des données…</string>
+    <string name="status_calc_done">Résultat : %1$d</string>
+    <string name="ui_reactive">Interface Réactive</string>
+    <string name="btn_thread">Charger (Thread)</string>
+    <string name="btn_async">Calcul (AsyncTask)</string>
+    <string name="btn_toast">Ping UI</string>
+    <string name="label_actions">PANNEAU DE CONTRÔLE</string>
+    <string name="desc_image">Icône d\'état</string>
+    <string name="progress_percent">%1$d%%</string>
+</resources>
